@@ -433,7 +433,7 @@ public class RNIapModule extends ReactContextBaseJavaModule {
         return;
       }
 
-      if (purchases.size() == 0) {
+      if (purchases == null || purchases.size() == 0) {
         rejectPromisesWithBillingError(PROMISE_BUY_ITEM, 1001);
         return;
       }
